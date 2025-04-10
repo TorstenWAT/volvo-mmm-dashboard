@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volvo MMM Dashboard Mockup</title>
+  <style>
+    :root {
+      --volvo-primary: #223C49;
+      --volvo-secondary: #F5F5F5;
+      --volvo-light: #ffffff;
+      --volvo-text: #000000;
+      --volvo-accent: #C9A86A;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--volvo-secondary);
+      color: var(--volvo-text);
+    }
+
+    header {
+      background: var(--volvo-primary);
+      color: var(--volvo-light);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--volvo-light);
+      padding: 10px;
+    }
+
+    nav button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: 2px solid var(--volvo-primary);
+      background: transparent;
+      color: var(--volvo-primary);
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    nav button.active {
+      background: var(--volvo-primary);
+      color: var(--volvo-light);
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .chart-container, .table-container {
+      background: var(--volvo-light);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(103, 45, 145, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--volvo-primary);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .download {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .download button {
+      padding: 10px 15px;
+      background: var(--volvo-accent);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .chart-placeholder {
+      width: 100%;
+      height: 300px;
+      background: #ddd;
+      margin: 10px 0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-weight: bold;
+    }
+
+    img.chart-img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      border-radius: 6px;
+      margin: 10px 0;
+      transition: transform 0.3s ease;
+    }
+
+    img.chart-img:hover {
+      transform: scale(1.55);
+      z-index: 1.5;
+    }
+
+    .three-chart-row {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .three-chart-row img.chart-img {
+      flex: 1;
+      height: 300px;
+      object-fit: contain;
+    }
+
+    .full-width-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      margin: 10px 0;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .full-width-image:hover {
+      transform: scale(1.02);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Volvo MMM Dashboard</h1>
+    <p>Mockup – Leads / Awareness / Consideration</p>
+  </header>
+
+  <nav>
+    <button class="active">Leads</button>
+    <button>Awareness</button>
+    <button>Consideration</button>
+  </nav>
+
+  <section>
+    <div class="chart-container">
+      <h2>1. Model Summary</h2>
+      <ul>
+        <li>Time Period Overview</li>
+        <li>R² = 0.64 | MAPE = 13% | wMAPE = 11%</li>
+      </ul>
+      <div class="three-chart-row">
+        <img src="img/expected-vs-actual.png" alt="Expected vs Actual KPI" class="chart-img" />
+        <img src="img/contribution.png" alt="Channel Contribution" class="chart-img" />
+        <img src="img/roi-effectiveness.png" alt="ROI Effectiveness" class="chart-img" />
+      </div>
+      <div class="three-chart-row">
+        <img src="img/baseline.png" alt="Contribution By Baseline and Marketing Channels" class="chart-img" />
+        <img src="img/roi-vs-effectiveness.png" alt="ROI versus Effectiveness" class="chart-img" />
+        <img src="img/response-curves.png" alt="Response Curves" class="chart-img" />
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h2>2. Model Optimization Recommendations</h2>
+      <div class="three-chart-row">
+        <img src="img/opti-summary.png" alt="optimisation Summary" class="chart-img" />
+      </div>
+      <div class="three-chart-row">
+        <img src="img/optimised-budget-allocation.png" alt="Change in optimal spend for each channel" class="chart-img" />
+        <img src="img/optimized-incremental-budget.png" alt="Optimised Incremental Budget" class="chart-img" />
+      </div>
+      <div class="three-chart-row">
+        <img src="img/optimised-budget-allocation2.png" alt="ROI Effectiveness" class="chart-img" />
+        <img src="img/change-optimal-spend.png" alt="Optimised Incremental Budget" class="chart-img" />
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h2>3. Response Curves</h2>
+      <img src="img/curves-1.png" alt="optimisation Summary" class="full-width-image" />
+    </div>
+
+    <div class="chart-container">
+      <h2>4. Export & Notes</h2>
+      <p>Static or editable notes section for commentary.</p>
+      <div class="download">
+        <button>Download Data (.csv / .xlsx)</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
